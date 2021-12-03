@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threed64", "Threed64\Threed64.csproj", "{273B01F2-EC15-4785-B1BF-53E0AA5B5798}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{6A7EFA48-63BD-46F5-9C81-852AA60701DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{273B01F2-EC15-4785-B1BF-53E0AA5B5798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{273B01F2-EC15-4785-B1BF-53E0AA5B5798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{273B01F2-EC15-4785-B1BF-53E0AA5B5798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{273B01F2-EC15-4785-B1BF-53E0AA5B5798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A7EFA48-63BD-46F5-9C81-852AA60701DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A7EFA48-63BD-46F5-9C81-852AA60701DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A7EFA48-63BD-46F5-9C81-852AA60701DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A7EFA48-63BD-46F5-9C81-852AA60701DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8035E9AB-F7A1-46AA-ACEB-438DE12205B5}
+	EndGlobalSection
+EndGlobal
