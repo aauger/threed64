@@ -24,6 +24,9 @@ namespace Threed64
         public int AABorderWidth { get; set; } = 5;
         public int AALineBorderWidth { get; set; } = 2;
         public string AATextString { get; set; } = "Text";
+        public bool AATextShadow { get; set; } = false;
+        public Color AATextShadowColor { get; set; } = Color.Gray;
+        public int AATextShadowOffset { get; set; } = 1;
 
         private HoverMode _curHover = HoverMode.HOVER_UP;
         private int _drawOffset = 0;
@@ -31,7 +34,7 @@ namespace Threed64
         protected override void OnPaint(PaintEventArgs e)
         {
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
-            e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
+            e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;           
             base.OnPaint(e);
 
             SolidBrush baseColor = _curHover == HoverMode.HOVER_UP ?
@@ -77,11 +80,21 @@ namespace Threed64
                 case ImageMode.TEXT:
                     {
                         SizeF strSize = e.Graphics.MeasureString(AATextString, Font);
+
+                        if (AATextShadow)
+                        { 
+                            e.Graphics.DrawString(AATextString, Font,
+                                new SolidBrush(AATextShadowColor),
+                            new PointF((ClientRectangle.Width / 2) - (strSize.Width / 2) + _drawOffset + AATextShadowOffset,
+                                (ClientRectangle.Height / 2) - (strSize.Height / 2) + _drawOffset + AATextShadowOffset));
+                        }
+
                         e.Graphics.DrawString
                             (AATextString, Font,
                             new SolidBrush(ForeColor),
                             new PointF((ClientRectangle.Width / 2) - (strSize.Width / 2) + _drawOffset,
                                 (ClientRectangle.Height / 2) - (strSize.Height / 2) + _drawOffset));
+
                     }
                     break;
                 case ImageMode.IMAGE:
