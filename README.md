@@ -1,6 +1,8 @@
 # threed64
 A .NET 6.0 rendition of some classic 3D WinForms controls.
 
+Add some Windows 3.1 spice to your internal application & tools now!
+
 ![Sample](https://raw.githubusercontent.com/aauger/threed64/master/netthreed64.png)
 
 These are not at feature-parity, but rather some fun & simple examples of custom painting. 
